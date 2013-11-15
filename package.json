@@ -1,0 +1,17 @@
+{
+  "name": "tracable",
+  "version": "0.0.1",
+  "description": "Log the stack trace before a function was created.",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run check-modules",
+    "test": "./node_modules/.bin/mocha --ui exports --reporter spec --slow 2000ms --bail ./tests/**/*.test.js",
+    "check-modules": "[ ./package.json -nt ./node_modules ] && $(rm -rf node_modules && npm install) || echo 'Modules are up to date'"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "repository": "https://github.com/samshull/tracable",
+  "author": "samshull",
+  "license": "MIT"
+}
