@@ -1,6 +1,6 @@
 {
   "name": "tracable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Log the stack trace before a function was created.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "preset-version": "[ ! -d ./distributable ] && mkdir distributable; npm run check-modules",
     "set-version": "node -e 'c=require(\"./package.json\");console.log(\"/* version: \"+c.version+\" */\")' > distributable/build.js",
     "prebuild": "npm run set-version",
-    "build": "./node_modules/gluejs/bin/gluejs --include ./index.js --main index.js --global RadarClient.Tracable >> distributable/build.js",
+    "build": "./node_modules/gluejs/bin/gluejs --include ./index.js --main index.js --global RadarClient.Tracable >> distributable/build.js"
   },
   "devDependencies": {
     "mocha": "*",
